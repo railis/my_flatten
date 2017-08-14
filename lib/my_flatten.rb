@@ -14,4 +14,8 @@ class Array
     flattened_array
   end
 
+  def my_flatten!
+    self.replace(my_flatten)
+  end
+
 end

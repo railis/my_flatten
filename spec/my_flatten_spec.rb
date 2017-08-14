@@ -62,3 +62,17 @@ RSpec.describe Array, "#my_flatten" do
   end
 
 end
+
+RSpec.describe Array, "#my_flatten!" do
+
+  context "mutability" do
+
+    it "overwrites the original array" do
+      arr = [1, [2, 3], 4]
+      arr.my_flatten!
+      expect(arr).to eq [1, 2, 3, 4]
+    end
+
+  end
+
+end
